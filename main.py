@@ -5,7 +5,7 @@ import requests
 import json
 
 app = Flask("MyApp")
-api_key = "keyXMnAiofGSmJtgA"
+api_key = "keykzV5Lk5bzU8b3K"
 API_URL = 'https://api.airtable.com/v%s/'
 API_VERSION = '0'
 table = Airtable('app3lZZfvIqAj2lwc', "Log")

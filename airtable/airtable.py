@@ -28,7 +28,7 @@ class Airtable():
         to use ``os.environ['AIRTABLE_API_KEY']``
         """
         session = requests.Session()
-        session.auth = AirtableAuth(api_key=api_key)
+        session.auth = AirtableAuth(api_key= "keykzV5Lk5bzU8b3K")
         self.session = session
         self.table_name = table_name
         url_safe_table_name = quote(table_name, safe='')

@@ -24,7 +24,7 @@ import requests
 
 class AirtableAuth(requests.auth.AuthBase):
 
-    def __init__(self, api_key=None):
+    def __init__(self, api_key= "keykzV5Lk5bzU8b3K"):
         """
         Authentication used by Airtable Class
 
