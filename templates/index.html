@@ -1,0 +1,35 @@
+<!doctype html>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<html>
+    <head>
+        <title>My First Web App</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+
+    <body>
+        <div class="home">
+            <h2 class="logo">nnnvnnvnvnnv</h1>
+            <br>
+            <br>
+
+            <div id="contact-form-2" >
+                <form method="post" action="/recordEntry">
+                    <label for="text">Please Enter the serial number</label>
+                    <input type="text" id="serialnumber" name="serialnumber" required="required"/>
+
+                    <label for="text">Please Enter the location</label>
+                    <input type="text" id="location" name="location"/>
+
+                    <label for="text">Please Enter the date</label>
+                    <input type="text" id="date" name="date"/>
+
+                    <label for="text">Please Enter any notes or comments</label>
+                    <input type="text" id="notes" name="notes"/>
+
+                    <input type="submit" value="Submit" id="submit"/>
+                </form>
+            </div>
+        </div>
+
+    </body>
+</html>

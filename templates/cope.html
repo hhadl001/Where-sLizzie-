@@ -1,0 +1,21 @@
+<!doctype html>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<html>
+    <head>
+        <title>My First Web App</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+
+    <body>
+
+            {% if data %}
+
+                <p> <h2> here is your horoscope <hr>{{data}} </h2></p>
+
+            {% else %}
+
+            <p>Hello - No Message!</p>
+
+            {% endif %}
+    </body>
+</html>
