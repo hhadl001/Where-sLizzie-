@@ -1,0 +1,22 @@
+<!doctype html>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<html>
+    <head>
+        <title>My First Web App</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+
+    <body>
+        <div class="home">
+            <h2 class="logo">Here is Lizzie</h1>
+            <br>
+            <br>
+
+            <div id="contact-form-2" >
+             show here the list
+             {{message}}
+            </div>
+        </div>
+
+    </body>
+</html>
