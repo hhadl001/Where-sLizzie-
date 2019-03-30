@@ -1,13 +1,15 @@
-# accesses flak's libraries and import the one holding Flask itse;f
-from flask import Flask , render_template, request
+#!/usr/bin/env python
+from flask import Flask, render_template, request
 import requests
 import json
+from airtable.airtable import Airtable
 import pprint
-from airtable import Airtable
 from pprint import pprint
-#defines the app as a function called Flask using arguments called "my app"
+
 app = Flask("MyApp")
 api_key = "keyXMnAiofGSmJtgA"
+API_URL = 'https://api.airtable.com/v%s/'
+API_VERSION = '0'
 airtable = Airtable("app3lZZfvIqAj2lwc", "Log")
 
 #decorator that talks to the server and flask
