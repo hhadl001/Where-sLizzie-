@@ -10,7 +10,7 @@ app = Flask("MyApp")
 api_key = "keyXMnAiofGSmJtgA"
 API_URL = 'https://api.airtable.com/v%s/'
 API_VERSION = '0'
-airtable = Airtable("app3lZZfvIqAj2lwc", "Log")
+table = Airtable("app3lZZfvIqAj2lwc", "Log")
 
 #decorator that talks to the server and flask
 @app.route("/")
@@ -28,10 +28,10 @@ def addEntry_in_airtable(serialnumber, location, date, notes):
     print response.url
     print response.status_code
 
-def addEntry_in_airtable2(serialnumber, location, date, notes):
+def addEntry_in_airtable2(serialnumber, location, date, notes, typecast=False):
+    table = Airtable("app3lZZfvIqAj2lwc", "Log")
     records = {'serialnumber': serialnumber, 'location': location,  'date': date,  'notes': notes}
-    airtable = Airtable("app3lZZfvIqAj2lwc", "Log")
-    airtable.insert(records)
+    table.insert(records)
 
 @app.route("/recordEntry" , methods=["POST"])
 #defines a function called hello using arguments visitor
