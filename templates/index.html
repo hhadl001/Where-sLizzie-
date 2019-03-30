@@ -1,17 +1,44 @@
 <!doctype html>
-<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 <html>
     <head>
         <title>Where's Lizzie?</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+    body {background-color: #DC5599;}
+    h2 {
+      color: #052D3C;
+      font-family: verdana;
+      font-size: 400%;
+      text-align: center;
+    }
+    h3 {
+      color: #052D3C;
+      font-family: verdana;
+      font-size: 150%;
+      text-align: center;
+    }
+    #contact-form-2 {
+      color: #052D3C;
+      font-family: verdana;
+      font-size: 100%;
+      font-style: italic;
+      text-align: center;
+    }
+    .row {
+      display: flex;
+    }
+
+    .column {
+      flex: 10%;
+      padding: 5px;
+    }
+    </style>
     </head>
 
     <body>
         <div class="home">
-            <h2 class="logo">Where's Lizzie?</h1>
-            <br>
-            <h3>To see where your note has been, please start below:</h3>
 
+            <h2 class="logo">Where's Lizzie?</h1>
+            <h3>To see where your note has been, please start below:</h3>
 
             <div id="contact-form-2" >
                 <form method="post" action="/recordEntry">
@@ -29,7 +56,30 @@
 
                     <input type="submit" value="Submit" id="submit"/>
                 </form>
+                <div class="row">
+                <div class="column">
+                  <img src="static/images/queensimage.jpeg" alt="Queen" height="80" width="80">                </div>
+                <div class="column">
+                  <img src="static/images/queensimage.jpeg" alt="Queen" height="80" width="80">                </div>
+                <div class="column">
+                  <img src="static/images/queensimage.jpeg" alt="Queen" height="80" width="80">                </div>
+                <div class="column">
+                  <img src="static/images/queensimage.jpeg" alt="Queen" height="80" width="80">                </div>
+                <div class="column">
+                  <img src="static/images/queensimage.jpeg" alt="Queen" height="80" width="80">                </div>
+                <div class="column">
+                  <img src="static/images/queensimage.jpeg" alt="Queen" height="80" width="80">                </div>
+                <div class="column">
+                  <img src="static/images/queensimage.jpeg" alt="Queen" height="80" width="80">                </div>
+                <div class="column">
+                  <img src="static/images/queensimage.jpeg" alt="Queen" height="80" width="80">                </div>
+                <div class="column">
+                  <img src="static/images/queensimage.jpeg" alt="Queen" height="80" width="80">                </div>
+                <div class="column">
+                  <img src="static/images/queensimage.jpeg" alt="Queen" height="80" width="80">                </div>
+              </div>
             </div>
+
         </div>
 
     </body>
