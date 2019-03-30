@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Where's Lizzie?</title>
+    <style>
+    body {background-color: #DC5599;}
+    h2 {
+      color: #052D3C;
+      font-family: verdana;
+      font-size: 400%;
+      text-align: center;
+    }
+    h3 {
+      color: #052D3C;
+      font-family: verdana;
+      font-size: 150%;
+      text-align: center;
+    }
+    #contact-form-2 {
+      color: #052D3C;
+      font-family: verdana;
+      font-size: 100%;
+      font-style: italic;
+      text-align: center;
+    }
+    .row {
+      display: flex;
+    }
+
+    .column {
+      flex: 10%;
+      padding: 5px;
+    }
+    </style>
+    </head>
+
+    <body>
+        <div class="home">
+
+            <h2 class="logo">Where's Lizzie?</h1>
+            <h3>To see where your note has been, please start below:</h3>
+
+            <div id="contact-form-2" >
+                <form method="post" action="/recordEntry">
+                    <label for="text">Serialnumber</label>
+                    <input type="text" id="serialnumber" name="serialnumber" required="required"/>
+
+                    <label for="text">Where are you?</label>
+                    <input type="text" id="location" name="location"/>
+
+                    <label for="text">What's the date?</label>
+                    <input type="text" id="date" name="date"/>
+
+                    <label for="text">Message</label>
+                    <input type="text" id="notes" name="notes"/>
+
+                    <input type="submit" value="Submit" id="submit"/>
+                </form>
+                <div class="row">
+                <div class="column">
+                  <img src="static/images/queensimage.jpeg" alt="Queen" height="80" width="80">                </div>
+                <div class="column">
+                  <img src="static/images/queensimage.jpeg" alt="Queen" height="80" width="80">                </div>
+                <div class="column">
+                  <img src="static/images/queensimage.jpeg" alt="Queen" height="80" width="80">                </div>
+                <div class="column">
+                  <img src="static/images/queensimage.jpeg" alt="Queen" height="80" width="80">                </div>
+                <div class="column">
+                  <img src="static/images/queensimage.jpeg" alt="Queen" height="80" width="80">                </div>
+                <div class="column">
+                  <img src="static/images/queensimage.jpeg" alt="Queen" height="80" width="80">                </div>
+                <div class="column">
+                  <img src="static/images/queensimage.jpeg" alt="Queen" height="80" width="80">                </div>
+                <div class="column">
+                  <img src="static/images/queensimage.jpeg" alt="Queen" height="80" width="80">                </div>
+                <div class="column">
+                  <img src="static/images/queensimage.jpeg" alt="Queen" height="80" width="80">                </div>
+                <div class="column">
+                  <img src="static/images/queensimage.jpeg" alt="Queen" height="80" width="80">                </div>
+              </div>
+            </div>
+
+        </div>
+
+    </body>
+</html>
