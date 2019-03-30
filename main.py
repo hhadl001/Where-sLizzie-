@@ -3,8 +3,6 @@ from flask import Flask, render_template, request
 import requests
 import json
 from airtable.airtable import Airtable
-import pprint
-from pprint import pprint
 
 app = Flask("MyApp")
 api_key = "keyXMnAiofGSmJtgA"
