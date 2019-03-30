@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 from flask import Flask, render_template, request
+from airtable import Airtable
 import requests
 import json
-from airtable.airtable import Airtable
 
 app = Flask("MyApp")
 api_key = "keyXMnAiofGSmJtgA"
 API_URL = 'https://api.airtable.com/v%s/'
 API_VERSION = '0'
-table = Airtable("app3lZZfvIqAj2lwc", "Log")
+table = Airtable('app3lZZfvIqAj2lwc', "Log")
 
 #decorator that talks to the server and flask
 @app.route("/")
@@ -42,7 +42,7 @@ def newEntry():
     date = form_data["date"]
     notes = form_data["notes"]
     addEntry_in_airtable2(serialnumber, location, date, notes)
-    travels = airtable.search('serialnumber', serialnumber)
+    travels = table.search('serialnumber', serialnumber)
     return render_template("trace.html", message=travels)
 
 #json.load method converts JSON string to Python Object
