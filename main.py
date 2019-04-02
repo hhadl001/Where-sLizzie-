@@ -3,6 +3,7 @@ from flask import Flask, render_template, request
 from airtable import Airtable
 import requests
 import json
+from json2table import convert
 
 app = Flask("MyApp")
 api_key = "keyXMnAiofGSmJtgA"
@@ -43,10 +44,15 @@ def newEntry():
     notes = form_data["notes"]
     addEntry_in_airtable2(serialnumber, location, date, notes)
     travels = table.search('serialnumber', serialnumber)
-    return render_template("trace.html", message=travels)
-
-#json.load method converts JSON string to Python Object
-#decorator talks to the server and flask
+    msg = ""
+    for x in range (0, len(travels)):
+        json_object = travels[x]
+        json_object = json_object["fields"]
+        build_direction = "TOP_TO_BOTTOM"
+        table_attributes = {"style" : "width:100%", "class" : "table table-striped"}
+        html = convert(json_object, build_direction=build_direction, table_attributes=table_attributes)
+        msg = msg + html
+    return render_template("trace.html", message=msg)
 
 #keyXMnAiofGSmJtgA
 app.run(debug=True)

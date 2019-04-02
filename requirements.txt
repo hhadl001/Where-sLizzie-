@@ -1,5 +1,7 @@
 flask
 requests
+airtable
+json2table
 gunicorn
 mock==1.0.1
 requests>=2.20.0
