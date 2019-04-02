@@ -55,7 +55,8 @@ def newEntry():
     return render_template("trace.html", message=msg)
 
 #keyXMnAiofGSmJtgA
-app.run(debug=True)
+if __name__ == "__main__":
+	app.run(debug=True)
 
 
 
