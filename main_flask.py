@@ -6,7 +6,7 @@ import json
 from json2table import convert
 
 app = Flask("MyApp")
-APIKEY = "keyXMnAiofGSmJtgA"
+APIKEY = "keyD1dJb6mjitHaHi"
 API_URL = 'https://api.airtable.com/v%s/'
 API_VERSION = '0'
 table = Airtable('app3lZZfvIqAj2lwc', "Log", api_key=APIKEY)
@@ -30,6 +30,7 @@ def addEntry_in_airtable(serialnumber, location, date, notes):
 def addEntry_in_airtable2(serialnumber, location, date, notes, typecast=False):
     table = Airtable("app3lZZfvIqAj2lwc", "Log", api_key=APIKEY)
     records = {'serialnumber': serialnumber, 'location': location,  'date': date,  'notes': notes}
+    print records
     table.insert(records)
 
 @app.route("/recordEntry" , methods=["POST"])
@@ -43,7 +44,8 @@ def newEntry():
     date = form_data["date"]
     notes = form_data["notes"]
     addEntry_in_airtable2(serialnumber, location, date, notes)
-    travels = table.search('serialnumber', serialnumber)
+    print 'insert completed' + serialnumber
+    travels = table.search("serialnumber", serialnumber)
     msg = ""
     for x in range (0, len(travels)):
         json_object = travels[x]
